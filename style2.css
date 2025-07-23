@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background-color: rgba(245, 245, 247, 0.8);
+  width: 100vw;
+  height: 44px;
+  align-items: center;
+}
+nav a {
+  color: #000;
+  font-family: "inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+}
+.header-sec {
+  width: 100vw;
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: #fff;
+}
+.header-sec p {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.backsvg {
+  width: 100vw;
+  height: 75px;
+}
+section {
+  width: 100vw;
+  display: flex;
+  padding: 80px 140px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: top 80px bottom 80px;
+}
+.sec1 {
+  display: flex;
+  align-self: stretch;
+}
+.sec1 a {
+  color: #06c;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.sec1-child1 h1 {
+  background: linear-gradient(90deg, #0090f7 0%, #ba62fc 50%, #f2416b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52.01px; /* 118.205% */
+}
+.sec1-child1 {
+  display: flex;
+  gap: 32px;
+}
+.sec1-child1 p {
+  color: #6e6e73;
+  font-family: "Inter";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52.01px; /* 118.205% */
+}
+.sec1-child2 img {
+  width: 35px;
+  height: 35px;
+}
+.sec1-child2 {
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-self: stretch;
+  flex-direction: column;
+}
+.sec1-child2 h6 {
+  color: #1d1d1f;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+.sec1-child2 p {
+  color: #06c;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  padding-bottom: 16px;
+}

@@ -1,0 +1,539 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background-color: rgba(245, 245, 247, 0.8);
+  width: 100vw;
+  height: 44px;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+}
+nav a {
+  color: #000;
+  font-family: "inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+}
+.sec1 {
+  width: 100vw;
+  padding: 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: #fff;
+  padding-top: 50px;
+}
+.sec1 p {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+section .firstsection {
+  width: 100vw;
+  height: 692px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstsection {
+  background-image: url(./images/16pro.jpg);
+}
+section div h1 {
+  color: #f5f5f7;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  padding-top: 55px;
+}
+section div p {
+  color: #f5f5f7;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 20px;
+}
+.first-button {
+  background: #0071e3;
+  color: #fff;
+  border-radius: 40px;
+  padding: 12px 20px;
+  border: none;
+}
+.second-button {
+  background: transparent;
+  color: #0071e3;
+  border-radius: 40px;
+  padding: 12px 20px;
+  border: 1px solid #2997ff;
+}
+.secondsection {
+  background-image: url(./images/iphone\ 16.jpg);
+  width: 100vw;
+  height: 692px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+.thrd-button {
+  background: #fff;
+  color: #000;
+  border-radius: 40px;
+  padding: 12px 20px;
+  border: none;
+}
+.fourt-button {
+  background: transparent;
+  color: #fff;
+  border-radius: 40px;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+}
+.thirdsection {
+  background-image: url(./images/gift.jpg);
+  width: 100vw;
+  height: 692px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 12px;
+  padding-top: 446px;
+}
+.thirdsection h1 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+}
+.thirdsection p {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.ipad {
+  background-image: url(./images/ipadair.jpg);
+  width: 942px;
+  height: 580px;
+  background-position: center;
+}
+.airpod {
+  background-image: url(./images/airpods.jpg);
+  width: 942px;
+  height: 580px;
+  background-position: center;
+}
+.watch {
+  background-image: url(./images/iwatch.jpg);
+  width: 942px;
+  height: 580px;
+  background-position: center;
+}
+.macbook {
+  background-image: url(./images/macbook.jpg);
+  width: 942px;
+  height: 580px;
+  background-position: center;
+}
+.trade {
+  background-image: url(./images/trade.jpg);
+  width: 942px;
+  height: 580px;
+  background-position: center;
+}
+.card {
+  background-image: url(./images/applecard.jpg);
+  width: 942px;
+  height: 580px;
+  background-position: center;
+}
+.contianer1 {
+  display: flex;
+  width: 100vw;
+  gap: 12px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  text-align: center;
+  align-items: center;
+}
+.contianer2 {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 12px;
+  width: 100vw;
+}
+.contianer3 {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 12px;
+  width: 100vw;
+}
+.logoairpad {
+  background-image: url(./images/ipadairlogo.png);
+  width: 430px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 256px;
+  padding-top: 70px;
+  padding-bottom: 4px;
+}
+.ipad p {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.hello-apple {
+  padding-top: 355px;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    #0090f7 0%,
+    #ba62fc 33.33%,
+    #f2416b 66.67%,
+    #f55600 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.airpod p {
+  color: #f5f5f7;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 2px;
+}
+.airpod h1 {
+  color: #f5f5f7;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  padding-top: 401px;
+}
+.watch h1 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 58px;
+}
+.watch p {
+  text-align: center;
+  font-size: 18px;
+}
+.watch {
+  position: relative;
+}
+.logoapplewatch {
+  position: absolute;
+  padding-left: 381px;
+  padding-top: 58px;
+}
+.watch h2 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.macbook h1 {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  padding-top: 48px;
+}
+.macbook p {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.trade h1 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 58px;
+}
+.trade p {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 4px;
+}
+
+.card p {
+  color: #1d1d1f;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 4px;
+}
+.card h1 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 58px;
+}
+.card {
+  position: relative;
+}
+.trade {
+  position: relative;
+}
+
+.card-apple-logo {
+  position: absolute;
+  margin-top: 54px;
+  padding-left: 406px;
+}
+.trade-apple-logo {
+  position: absolute;
+  margin-top: 54px;
+  padding-left: 381px;
+}
+.movie-container {
+  display: flex;
+  width: 100vw;
+  height: 668px;
+  gap: 16px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.movie1 {
+  background-image: url(./images/movie1.jpg);
+  min-width: 1250px;
+  height: 668px;
+  display: flex;
+  align-items: end;
+  padding-left: 70px;
+  padding-bottom: 58px;
+  gap: 20px;
+  scroll-snap-align: center;
+}
+.movie2 {
+  background-image: url(./images/movie2.jpg);
+  min-width: 1250px;
+  height: 668px;
+  display: flex;
+  align-items: end;
+  padding-left: 70px;
+  padding-bottom: 58px;
+  gap: 20px;
+  scroll-snap-align: center;
+}
+.movie3 {
+  background-image: url(./images/movie3.jpg);
+  min-width: 1250px;
+  height: 668px;
+  display: flex;
+  align-items: end;
+  padding-left: 70px;
+  padding-bottom: 58px;
+  gap: 20px;
+  scroll-snap-align: center;
+}
+
+.movie1 button {
+  width: 133px;
+  height: 44px;
+  border-radius: 999px;
+  color: #000;
+  font-family: "Inter";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+}
+
+.movie1 h1 {
+  color: #fff;
+}
+.movie2 button {
+  width: 133px;
+  height: 44px;
+  border-radius: 999px;
+  color: #000;
+  font-family: "Inter";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+}
+.movie2 h1 {
+  color: #fff;
+}
+.movie3 button {
+  width: 133px;
+  height: 44px;
+  border-radius: 999px;
+  color: #000;
+  font-family: "Inter";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+}
+.movie3 h1 {
+  color: #fff;
+}
+.parent-dot {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+.dot {
+  background-color: gray;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+.apple-container {
+  display: flex;
+  gap: 16px;
+  width: 100vw;
+  overflow-x: scroll;
+  margin-top: 24px;
+}
+.pilate {
+  background-image: url(./images/fitness.jpg);
+  background-repeat: no-repeat;
+  min-width: 417px;
+  height: 236px;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.music {
+  background-image: url(./images/music.jpg);
+  width: 196px;
+  height: 196px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.nba2k {
+  background-image: url(./images/arcade.jpg);
+  min-width: 417px;
+  height: 236px;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 149px;
+}
+.fitness {
+  background-image: url(./images/kim.jpg);
+  min-width: 417px;
+  height: 236px;
+  color: #fff;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 163px;
+}
+.music2 {
+  background-image: url(./images/music2.jpg);
+  width: 196px;
+  height: 196px;
+  background-repeat: no-repeat;
+  background-position: start;
+}
+.music {
+  background-color: #1b2632;
+  min-width: 417px;
+  height: 236px;
+  position: relative;
+}
+.music2 {
+  background-color: #1b2632;
+  min-width: 417px;
+  height: 236px;
+}
+.music h3 {
+  position: absolute;
+  padding-left: 226px;
+  padding-top: 109px;
+}
