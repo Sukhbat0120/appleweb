@@ -48,11 +48,11 @@ section {
   padding: 80px 140px;
   justify-content: space-between;
   align-items: flex-start;
-  padding: top 80px bottom 80px;
 }
 .sec1 {
   display: flex;
   align-self: stretch;
+  position: relative;
 }
 .sec1 a {
   color: #06c;
@@ -66,7 +66,7 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 44px;
   font-style: normal;
   font-weight: 700;
