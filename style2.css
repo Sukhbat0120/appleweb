@@ -117,3 +117,61 @@ section {
   text-underline-offset: auto;
   padding-bottom: 16px;
 }
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100vw;
+  height: 146px;
+  padding: 80px 140px;
+}
+.products-card {
+  display: flex;
+  padding: 16px 8px;
+  position: relative;
+  width: 120px;
+  height: 78px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.products-list p {
+  color: #1d1d1f;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+.bg0 {
+  background-image: url(./images2/mac.png);
+}
+.bg1 {
+  background-image: url(./images2/iphone.png);
+}
+.bg2 {
+  background-image: url(./images2/ipad.png);
+}
+.bg3 {
+  background-image: url(./images2/watch.png);
+}
+.bg4 {
+  background-image: url(./images2/vision\ pro.png);
+}
+.bg5 {
+  background-image: url(./images2/airpods.png);
+}
+.bg6 {
+  background-image: url(./images2/airtag.png);
+}
+.bg7 {
+  background-image: url(./images2/appletv4k.png);
+}
+.bg8 {
+  background-image: url(./images2/homepod.png);
+}
+.bg9 {
+  background-image: url(./images2/accessiories.png);
+}
+.bg10 {
+  background-image: url(./images2/giftcard.png);
+}
