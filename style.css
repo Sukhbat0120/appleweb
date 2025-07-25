@@ -458,8 +458,8 @@ section div p {
   display: flex;
   gap: 16px;
   width: 100vw;
-  overflow-x: scroll;
   margin-top: 24px;
+  position: relative;
 }
 .pilate {
   background-image: url(./images/fitness.jpg);
@@ -474,6 +474,12 @@ section div p {
   display: flex;
   justify-content: end;
   align-items: end;
+  animation: auto-scroll;
+  position: absolute;
+  left: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 15s;
 }
 .music {
   background-image: url(./images/music.jpg);
@@ -485,6 +491,13 @@ section div p {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
+  animation: auto-scroll;
+  position: absolute;
+  left: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-delay: 5s;
 }
 .nba2k {
   background-image: url(./images/arcade.jpg);
@@ -499,7 +512,15 @@ section div p {
   justify-content: end;
   align-items: end;
   gap: 149px;
+  animation: auto-scroll;
+  position: absolute;
+  left: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-delay: 10s;
 }
+
 .fitness {
   background-image: url(./images/kim.jpg);
   min-width: 417px;
@@ -513,6 +534,13 @@ section div p {
   justify-content: end;
   align-items: end;
   gap: 163px;
+  animation: auto-scroll;
+  position: absolute;
+  left: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-delay: 15s;
 }
 .music2 {
   background-image: url(./images/music2.jpg);
@@ -520,6 +548,13 @@ section div p {
   height: 196px;
   background-repeat: no-repeat;
   background-position: start;
+  animation: auto-scroll;
+  position: absolute;
+  left: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-delay: 20s;
 }
 .music {
   background-color: #1b2632;
@@ -536,4 +571,9 @@ section div p {
   position: absolute;
   padding-left: 226px;
   padding-top: 109px;
+}
+@keyframes auto-scroll {
+  to {
+    left: -417px;
+  }
 }

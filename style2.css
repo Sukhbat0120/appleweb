@@ -119,7 +119,7 @@ section {
 }
 .products-list {
   display: flex;
-  flex-direction: column;
+
   gap: 12px;
   width: 100vw;
   height: 146px;
@@ -133,6 +133,7 @@ section {
   height: 78px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: darkblue;
 }
 .products-list p {
   color: #1d1d1f;

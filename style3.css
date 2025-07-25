@@ -1,0 +1,14 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: darkolivegreen;
+  border-radius: 50%;
+  animation: move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+body{
+    display: flex;
+}
+@keyframes move {
