@@ -8,7 +8,3 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-body{
-    display: flex;
-}
-@keyframes move {
