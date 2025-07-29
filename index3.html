@@ -5,58 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
   </head>
-  <body>
+  <body style="background-color: gainsboro">
+    <h1>java script</h1>
+    <button class="button is-info" onclick="sum()">click</button>
+    <button class="button is-link" onclick="avg()">Click me</button>
+    <button class="button is-danger" onclick="too()">Even or Odd</button>
+    <button class="button is-success" onclick="age()">Age group</button>
+    <button class="button is-warning" onclick="log()">Log in</button>
+    <button class="button is-light" onclick="">Click or</button>
+    <article class="message">
+      <div class="message-header">
+        <p>Dark knight</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body" id="result"></div>
+    </article>
     <script>
-      // let price = 40000;
-      //  let sale = 30;
+      let output;
+      function print() {
+        document.getElementById("result").innerText = output;
+      }
+      function sum() {
+        let input = prompt("input");
 
-      // let finalPrice = (price * (100 - sale)) / 100;
-      //console.log("finalPrice;");
+        let a = 89;
+        let b = 180;
+        let sum = a + b;
 
-      //let score1 = 80;
-      //let score2 = 88;
-      //let score3 = 84;
-      //let totalScore = (score1 + score2 + score3) / 3;
-      //console.log(totalScore);
+        output = sum;
+        print();
+      }
+      function avg() {
+        let a = 1000;
+        let b = 450;
+        let avg = (a + b) / 2;
+        output = avg;
+        print();
+      }
+      function too() {
+        let tooInput = prompt("Too 1-10 hoorond?");
+        let too = Number(tooInput);
 
-      //let height = 20;
-      // let width = 20;
-      //let area = height * width;
+        if (too % 2 == 0) {
+          output = "even";
+        } else {
+          output = "odd";
+        }
 
-      //console.log(area);
+        print();
+      }
+      function age() {
+        const ageInput = prompt("Enter your nas");
+        const age = Number(ageInput);
 
-      //let celsius = 21;
-      //let fahrenhiet = celsius * (9 / 5) + 32;
+        if (age < 13) {
+          output = "child";
+        }
+        if (age >= 13 && age <= 19) {
+          output = "teen";
+        }
+        if (age >= 20 && age <= 65) {
+          output = "adult";
+        }
+        if (age >= 66) {
+          output = "senior";
+        }
+        print();
+      }
+      function log() {
+        let log = prompt("Enter your name?");
+        let passlog = prompt("Enter your password?");
+        let name = admin01;
+        let pass = pass01;
 
-      //console.log(fahrenhiet);
-
-      //let minutes = 200;
-      //let hours = minutes / 60;
-
-      // console.log(hours);
-
-      //let age = prompt ("Nasaa heleere?" );
-      //let a = 1;
-      //let b = 5;
-      //console.log(a != b && a < b);
-      //console.log(a == b || a > b);
-      // let numberAge = prompt("Nasaa heleere?");
-      //let hasInvitation = prompt("urilga?");
-
-      // console.log(numberAge >= 21 && hasInvitation === "true");
-      // console.log(hasInvitation);
-      //let userName = prompt("Please enter username");
-      //let password = prompt("Please enter password");
-
-      //let adminName = "Su";
-      //let adminPassword = "pass123";
-
-      //console.log(userName == adminName && adminPassword == password);
-      //let testScore = prompt("score o bichnu uu?");
-      //let passdrom = prompt("drom tentssnu ?");
-
-      //console.log(testScore >= 18 && passdrom == "true");
+        if (name == log && pass == passlog) {
+          output = "Log in  successful";
+        } else {
+          output = "Log in incorrect";
+        }
+        print();
+      }
     </script>
   </body>
 </html>
