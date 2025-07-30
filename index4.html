@@ -17,7 +17,14 @@
     <button class="button is-light" onclick="large()">Large</button>
     <button class="button is-info" onclick="light()">traffic</button>
     <button class="button is-link" onclick="rock()">Rock paper scissors</button>
-    <button onclick="dun()">Dun</button>
+    <button class="button is-link" onclick="dun()">dun</button>
+    <button class="button is-light" onclick="Leap()">Leap year checker</button>
+    <button class="button is-warning" onclick="triangle()">
+      Triangle checker
+    </button>
+    <button class="button is-danger" onclick="clock()">Clock conventer</button>
+    <button class="button is-info" onclick="days()">Month days</button>
+    <button class="button is-danger" onclick="atm()">ATM withdrawl</button>
     <article class="message">
       <div class="message-header">
         <p>Dark knight</p>
@@ -71,23 +78,27 @@
         } else {
           output = "Log in incorrect";
         }
+
         print();
       }
-      // function large() {
-      // const number1 = prompt("Enter a number?");
-      // const number2 = prompt("Enter a number?");
 
-      // const number = Number(number1);
-      //  const too = Number(number2);
+      function light() {
+        const lightInput = prompt("Traffic light is?");
 
-      //   if (number);
-      //  }
-      // function light() {}
-      // function rock() {}
+        if (lightInput === "green") {
+          output = "Go";
+        } else if (lightInput === "yellow") {
+          output = "Wait";
+        } else {
+          output = "stop";
+        }
+
+        print();
+      }
 
       function dun() {
-        let dunInput = prompt("Dungee bicheerei");
-        let dun = Number(dunInput);
+        const dunInput = prompt("Dungee bicheerei");
+        const dun = Number(dunInput);
 
         if (dun <= 59) {
           output = "F";
@@ -97,10 +108,10 @@
           output = "C";
         } else if (dun <= 89) {
           output = "B";
-        } else dun <= 100;
-        {
+        } else {
           output = "A";
         }
+
         print();
       }
     </script>
