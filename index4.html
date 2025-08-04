@@ -36,29 +36,6 @@
       <div class="message-body" id="result"></div>
     </article>
 
-    <section>
-      <h1>TicTacToe</h1>
-      <div
-        style="
-          background-color: cadetblue;
-          width: fit-content;
-          height: fit-content;
-          display: grid;
-          grid-template-columns: 3;
-          grid-template-rows: 3;
-        "
-      >
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-        <button class="button is-light"></button>
-      </div>
-    </section>
     <script>
       let output;
       function print() {
@@ -268,6 +245,26 @@
           output = a * 0.05 + "$";
         }
         print();
+      }
+
+      let row = 1;
+      while (row <= 4) {
+        if (row % 2 === 0) {
+          console.log(row + "me");
+        } else {
+          console.log(row + "add");
+        }
+        row++;
+      }
+
+      let n = 1;
+      while (n <= 9) {
+        if (n % 4 === 0) {
+          console.log(n + "-_-");
+        } else {
+          console.log(n + "-*-");
+        }
+        n++;
       }
     </script>
   </body>
