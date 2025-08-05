@@ -7,6 +7,11 @@
   </head>
   <body>
     <button onclick="bod2()">loop 2</button>
+    <button onclick="bod3()">loop 3</button>
+    <button onclick="bod4()">loop 4</button>
+    <button onclick="bod5()">loop 5</button>
+    <button onclick="bod6()">loop 6</button>
+    <button onclick="bod7()">loop 7</button>
     <script>
       // let input = prompt("1 ees ih too bich");
       //let number = Number(input);
@@ -27,6 +32,46 @@
             console.log();
           }
         }
+      }
+      function bod3() {
+        let input = prompt("1 ees ih too bich");
+        let n = Number(input);
+        let sum = 0;
+        let index = 1;
+        while (sum <= n) {
+          sum += index;
+          console.log(sum);
+        }
+      }
+      function bod4() {
+        let input = prompt("n too bichne uu");
+        let n = Number(input);
+        let sum = 0;
+        for (let i = 1; i <= n; i += 2) sum += i;
+        console.log(sum);
+      }
+      function bod5() {
+        let input = prompt("n too bichne uu");
+        let n = Number(input);
+        let sum = 0;
+        let index = 1;
+        while (sum <= n) {
+          sum += index;
+          console.log(sum);
+        }
+      }
+      function bod6() {
+        let input = prompt("too bichne uu");
+        let n = Number(input);
+        let count = 0;
+        if (n < 10) {
+          console.log("1");
+        }
+        while (n != 0) {
+          n = n / 10;
+          count++;
+        }
+        console.log(count);
       }
     </script>
   </body>
