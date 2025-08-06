@@ -12,7 +12,9 @@
     <button onclick="bod5()">loop 5</button>
     <button onclick="bod6()">loop 6</button>
     <button onclick="bod7()">loop 7</button>
+    <pre id="result"></pre>
     <script>
+      let output;
       // let input = prompt("1 ees ih too bich");
       //let number = Number(input);
       //let n = 0;
@@ -51,15 +53,28 @@
         console.log(sum);
       }
       function bod5() {
-        let input = prompt("n too bichne uu");
-        let n = Number(input);
-        let sum = 0;
-        let index = 1;
-        while (sum <= n) {
-          sum += index;
-          console.log(sum);
+        function generateTable(m, k) {
+          for (let i = 1; i <= k; i++) {
+            const one = m + " x " + i + "=" + m * i;
+            output += one;
+            output += "\n";
+          }
+          output += "\n";
+          return output;
+        }
+
+        const input1 = prompt("urjigdhuun");
+        const L = Number(input1);
+        const input2 = prompt("urjver");
+        const P = Number(input2);
+
+        let result = "";
+        for (let i = 1; i <= L; i++) {
+          const table = generateTable(i, P);
+          result += table;
         }
       }
+      document.getElementById("result").innerText = result;
       function bod6() {
         let input = prompt("too bichne uu");
         let n = Number(input);

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="snumber()">1</button>
+    <button onclick="snumber()">2</button>
+    <button onclick="snumber()">3</button>
+    <button onclick="snumber()">4</button>
+    <button onclick="snumber()">5</button>
+    <button onclick="snumber()">6</button>
+    <button onclick="snumber()">7</button>
+    <button onclick="snumber()">8</button>
+    <button onclick="snumber()">9</button>
+    <button onclick="snumber()">0</button>
+    <script>
+      const n = 4;
+      let result = "";
+      for (let row = 1; row <= n; row++) {
+        for (let i = 1; i <= n; i++) {
+          result = result + "* ";
+        }
+        result = result + "\n";
+      }
+      console.log(result);
+
+      function findSquare(number) {
+        let square = number * number;
+        console.log(square);
+      }
+      findSquare(10);
+
+      function sumofTwonumbers(a, b) {
+        let sum = a + b;
+        return sum;
+      }
+
+      function bodlogo() {
+        let sum = sumofTwonumbers(9, 2);
+        let urj = sum * 10;
+        console.log(urj);
+      }
+      bodlogo();
+
+      function bodlogo2(a, b) {
+        let div = a / b;
+        return div;
+      }
+      bodlogo2(6, 3);
+
+      let too1;
+      function snumber(number) {
+        console.log("before return", number);
+        return number;
+        console.log("after return", number);
+      }
+    </script>
+  </body>
+</html>
