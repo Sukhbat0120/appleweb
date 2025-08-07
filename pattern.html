@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <button onclick="snumber()">1</button>
-    <button onclick="snumber()">2</button>
-    <button onclick="snumber()">3</button>
-    <button onclick="snumber()">4</button>
-    <button onclick="snumber()">5</button>
-    <button onclick="snumber()">6</button>
-    <button onclick="snumber()">7</button>
-    <button onclick="snumber()">8</button>
-    <button onclick="snumber()">9</button>
-    <button onclick="snumber()">0</button>
+  <body style="background-color: black">
+    <div style="display: grid columns 3; grid-row: 3">
+      <button onclick="snumber()">1</button>
+      <button onclick="snumber()">2</button>
+      <button onclick="snumber()">3</button>
+      <button onclick="snumber()">4</button>
+      <button onclick="snumber()">5</button>
+      <button onclick="snumber()">6</button>
+      <button onclick="snumber()">7</button>
+      <button onclick="snumber()">8</button>
+      <button onclick="snumber()">9</button>
+      <button onclick="snumber()">0</button>
+    </div>
     <script>
       const n = 4;
       let result = "";
@@ -57,6 +59,31 @@
         return number;
         console.log("after return", number);
       }
+
+      const ages = [
+        19, 30, 21, 34, 17, 32, 31, 19, 18, 30, 19, 18, 19, 29, 18, 20, 18, 17,
+        20, 16, 25, 20,
+      ];
+      let sum = 0;
+      for (let i = 0; i < ages.length; i++) {
+        if (ages[i] >= 21) {
+          sum++;
+        }
+      }
+      console.log(sum);
+
+      const mass = [1, 2, 5, 7, 9];
+      let max = mass[0];
+      for (let i = 1; i < mass.length; i++) {
+        if (mass[i] > max) {
+          max = mass[i];
+        }
+      }
+      console.log(max);
+
+      const mass2 = [1, 2, 3];
+      let sumofMass2 = mass2[0] + mass[1] + mass[2];
+      console.log(sumofMass2);
     </script>
   </body>
 </html>

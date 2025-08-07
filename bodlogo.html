@@ -15,8 +15,9 @@
     <pre id="result"></pre>
     <script>
       let output;
-      // let input = prompt("1 ees ih too bich");
-      //let number = Number(input);
+
+      //let input = prompt("1 ees ih too bich");
+      ///let number = Number(input);
       //let n = 0;
       // while (n < number) {
       // n++;
@@ -72,9 +73,10 @@
         for (let i = 1; i <= L; i++) {
           const table = generateTable(i, P);
           result += table;
+          document.getElementById("result").innerText = result;
         }
       }
-      document.getElementById("result").innerText = result;
+
       function bod6() {
         let input = prompt("too bichne uu");
         let n = Number(input);
