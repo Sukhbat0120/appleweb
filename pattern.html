@@ -82,8 +82,42 @@
       console.log(max);
 
       const mass2 = [1, 2, 3];
-      let sumofMass2 = mass2[0] + mass[1] + mass[2];
-      console.log(sumofMass2);
+      const sum2 = 0;
+      for (let i = 0; i < mass2.lenght; i++) {
+        const q = mass2[i];
+        sum2 += q;
+      }
+      console.log(sum2);
+
+      function urvuu() {
+        const arr = [1, 2, 3];
+        const reversedArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          const item = arr[i];
+          reversedArr.unshift(item);
+        }
+        console.log(reversedArr);
+      }
+      urvuu();
+
+      function names() {
+        const arr = ["Bold", "Dorj", "Sarnai"];
+        const target = "Dorj";
+        for (let i = 0; i < arr.length; i++) {
+          const one = arr[i];
+          if (one === target) {
+            return true;
+          }
+        }
+        return false;
+      }
+      const exist = names();
+      console.log(exist);
+
+
+
+
+      
     </script>
   </body>
 </html>
