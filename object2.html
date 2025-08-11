@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <button class="button is primery" onclick="all()">All</button>
+      <button class="button is primery" onclick="Adults()">Adults</button>
+      <button class="button is primery" onclick="minors()">Minors</button>
+    </div>
+    <table class="table is-bordered">
+      <thead>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+      </thead>
+      <tbody id="ners"></tbody>
+    </table>
+
+    <script>
+      const ners = [
+        { name: "Bat-Erdene", surname: "Tserendorj", age: 19 },
+        { name: "Naran", surname: "Batbayar", age: 45 },
+        { name: "Altan", surname: "Ganbold", age: 38 },
+        { name: "Enkh", surname: "Sukhbat", age: 20 },
+        { name: "Tsolmon", surname: "Erdenebat", age: 41 },
+        { name: "Temuulen", surname: "Batjargal", age: 30 },
+        { name: "Munkh", surname: "Tuvshin", age: 49 },
+        { name: "Bolor", surname: "Amgalan", age: 22 },
+        { name: "Ankhbayar", surname: "Nyambayar", age: 17 },
+        { name: "Oyun", surname: "Dorj", age: 39 },
+        { name: "Baatar", surname: "Dashdorj", age: 50 },
+        { name: "Gerel", surname: "Tsogt", age: 27 },
+        { name: "Sarnai", surname: "Erdene", age: 31 },
+        { name: "Zolzaya", surname: "Otgonbayar", age: 18 },
+        { name: "Delger", surname: "Tungalag", age: 44 },
+        { name: "Narantuya", surname: "Sodbileg", age: 35 },
+        { name: "Chingun", surname: "Bayarsaikhan", age: 26 },
+        { name: "Khulan", surname: "Munkhtsetseg", age: 20 },
+        { name: "Ganzorig", surname: "Enkhbold", age: 38 },
+        { name: "Enkhtuya", surname: "Tsend", age: 43 },
+      ];
+
+      function print() {
+        document.getElementById("ners").innerHTML = output;
+      }
+      function generateTableROw(ner) {
+        const result = `
+                    <tr>
+            <td>${ner.name.toUpperCase()}</td>
+            <td>${ner.surname}</td>
+            <td>${ner.age}</td>
+        </tr`;
+        return result;
+      }
+
+      let output = "";
+      for (let i = 0; i < ners.length; i++) {
+        output += generateTableROw(ners[i]);
+      }
+      print();
+
+      function Adults() {
+        let output = "";
+        for (let i = 0; i < ners.length; i++) {
+          output += generateTableROw(ners[i]);
+        }
+
+        print();
+      }
+      function minors() {
+        let output = "";
+        for (let i = 0; i < ners.length; i++) {
+          output += generateTableROw(ners[i]);
+        }
+        print();
+      }
+    </script>
+  </body>
+</html>
