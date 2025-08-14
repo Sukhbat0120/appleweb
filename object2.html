@@ -16,296 +16,350 @@
       <button class="button is primery" onclick="minors()">Minors</button>
       <button class="button is primery" onclick="score()">score</button>
       <button class="button is primery" onclick="search()">search</button>
-      <button class="button is primery" onclick="sortAge()">Sort age</button>
     </div>
     <table class="table is-bordered">
       <thead>
         <th>Name</th>
         <th>Surname</th>
-        <th>Age</th>
+        <th>
+          <div style="cursor: grabbing" onclick="sortAge()">Age</div>
+        </th>
         <th>Email</th>
         <th>Hobbies</th>
         <th>Score</th>
         <th>School</th>
+        <th>LastLoginAt</th>
       </thead>
-      <tbody id="ners"></tbody>
+      <tbody id="students"></tbody>
     </table>
 
     <script>
-      const ners = [
+      const students = [
         {
           firstName: "Бат",
           lastName: "Эрдэнэ",
-          age: 34,
-          email: "bat.erdene@example.mn",
-          hobbies: ["бөх", "морь унах"],
-          username: "bat.erdene34",
-          scores: [85, 92, 78],
-          school: "110-р сургууль",
+          age: 17,
+          score: 88,
+          email: "bat.erdene17@gmail.com",
+          hobbies: ["сагсан бөмбөг", "ном унших"],
+          username: "bat_erd17",
+          highSchool: "Улаанбаатар Элит Ахлах Сургууль",
+          lastLoginAt: 1691836800000,
         },
         {
-          firstName: "Солонго",
-          lastName: "Тунгалаг",
-          age: 19,
-          email: "solongo.tungalag@example.mn",
-          hobbies: ["зураг зурах", "унших"],
-          username: "solongo.tungalag19",
-          scores: [90, 87, 94],
-          school: "1-р сургууль",
+          firstName: "Ану",
+          lastName: "Баяр",
+          age: 16,
+          score: 92,
+          email: "anu.bayar16@yahoo.com",
+          hobbies: ["зураг зурах", "гар бөмбөг"],
+          username: "anu_bayar",
+          highSchool: "Орхон Дунд Сургууль",
+          lastLoginAt: 1690569600000,
         },
         {
-          firstName: "Ганбаатар",
-          lastName: "Батболд",
-          age: 42,
-          email: "ganbaatar.batbold@example.mn",
-          hobbies: ["загасчлал", "явган аялал"],
-          username: "ganbaatar.batbold42",
-          scores: [76, 85, 88],
-          school: "3-р сургууль",
-        },
-        {
-          firstName: "Анү",
-          lastName: "Мөнхзул",
-          age: 20,
-          email: "anu.munkhzul@example.mn",
-          hobbies: ["дуулалт", "дугуй унах"],
-          username: "anu.munkhzul20",
-          scores: [91, 82, 79],
-          school: "5-р сургууль",
-        },
-        {
-          firstName: "Тэмүжин",
-          lastName: "Алтансүх",
-          age: 37,
-          email: "temujin.altansukh@example.mn",
-          hobbies: ["нум сум", "унших"],
-          username: "temujin.altansukh37",
-          scores: [88, 90, 85],
-          school: "17-р сургууль",
+          firstName: "Төвшин",
+          lastName: "Сүх",
+          age: 18,
+          score: 85,
+          email: "tuvshinsukh18@mail.mn",
+          hobbies: ["тоглоом тоглох", "код бичих"],
+          username: "tuvsukh18",
+          highSchool: "Дархан Төв Ахлах Сургууль",
+          lastLoginAt: 1693267200000,
         },
         {
           firstName: "Номин",
-          lastName: "Эрдэнэчимэг",
-          age: 30,
-          email: "nomin.erdenechimeg@example.mn",
-          hobbies: ["бүжиглэх", "гал тогоо"],
-          username: "nomin.erdenechimeg30",
-          scores: [79, 83, 87],
-          school: "17-р сургууль",
+          lastName: "Баатар",
+          age: 17,
+          score: 91,
+          email: "nomin.baatar@gmail.com",
+          hobbies: ["төгөлдөр хуур тоглох", "шатар"],
+          username: "nomin_b",
+          highSchool: "Шинэ Эрин Ахлах Сургууль",
+          lastLoginAt: 1688736000000,
         },
         {
-          firstName: "Баатар",
-          lastName: "Цэрэндорж",
-          age: 45,
-          email: "baatar.tserendorj@example.mn",
-          hobbies: ["футбол", "шатрын тоглоом"],
-          username: "baatar.tserendorj45",
-          scores: [84, 76, 91],
-          school: "17-р сургууль",
+          firstName: "Ган",
+          lastName: "Тэмүүлэн",
+          age: 16,
+          score: 76,
+          email: "gan.temuulen16@gmail.com",
+          hobbies: ["хөлбөмбөг", "ном унших"],
+          username: "gantemuu",
+          highSchool: "Улаанбаатар Олон Улсын Сургууль",
+          lastLoginAt: 1692988800000,
         },
         {
-          firstName: "Хулан",
-          lastName: "Энхмаа",
+          firstName: "Солонго",
+          lastName: "Эрхэмбаяр",
+          age: 17,
+          score: 95,
+          email: "solongo.e17@hotmail.com",
+          hobbies: ["мэтгэлцээн", "зураг авах"],
+          username: "solongo_e",
+          highSchool: "Сант Сургууль",
+          lastLoginAt: 1691116800000,
+        },
+        {
+          firstName: "Тэмка",
+          lastName: "Батжаргал",
           age: 18,
-          email: "khulan.enkhmaa@example.mn",
-          hobbies: ["фотографи", "усанд сэлэх"],
-          username: "khulan.enkhmaa18",
-          scores: [95, 89, 92],
-          school: "17-р сургууль",
-        },
-        {
-          firstName: "Чинбат",
-          lastName: "Дорж",
-          age: 39,
-          email: "chinbat.dorj@example.mn",
-          hobbies: ["дугуй унах", "явган аялал"],
-          username: "chinbat.dorj39",
-          scores: [80, 84, 88],
-          school: "1-р сургууль",
-        },
-        {
-          firstName: "Сарангэрэл",
-          lastName: "Нарантуяа",
-          age: 33,
-          email: "sarangerel.narantuya@example.mn",
-          hobbies: ["бичих", "зураг зурах"],
-          username: "sarangerel.narantuya33",
-          scores: [91, 90, 85],
-          school: "5-р сургууль",
-        },
-        {
-          firstName: "Эрдэнэбаяр",
-          lastName: "Болд",
-          age: 21,
-          email: "erdenebayar.bold@example.mn",
-          hobbies: ["тоглоом", "сагсан бөмбөг"],
-          username: "erdenebayar.bold21",
-          scores: [88, 92, 84],
-          school: "",
-        },
-        {
-          firstName: "Туяа",
-          lastName: "Сүхбаатар",
-          age: 25,
-          email: "tuya.sukhbaatar@example.mn",
-          hobbies: ["унших", "гажсан"],
-          username: "tuya.sukhbaatar25",
-          scores: [90, 85, 87],
-          school: "5-р сургууль",
+          score: 82,
+          email: "temka.bj@gmail.com",
+          hobbies: ["сагсан бөмбөг", "гитар тоглох"],
+          username: "temkabj",
+          highSchool: "Мон Элит Ахлах Сургууль",
+          lastLoginAt: 1692441600000,
         },
         {
           firstName: "Мөнх",
-          lastName: "Баяр",
-          age: 16,
-          email: "munkh.bayar@example.mn",
-          hobbies: ["хөлбөмбөг", "видео тоглоом"],
-          username: "munkh.bayar16",
-          scores: [92, 95, 89],
-          school: "18-р сургууль",
-        },
-        {
-          firstName: "Оюун",
-          lastName: "Наранцацралт",
-          age: 29,
-          email: "oyun.narantsatsralt@example.mn",
-          hobbies: ["цэцэрлэгжүүлэлт", "гал тогоо"],
-          username: "oyun.narantsatsralt29",
-          scores: [84, 80, 86],
-          school: "",
-        },
-        {
-          firstName: "Дашдаваа",
-          lastName: "Ганболд",
-          age: 44,
-          email: "dashdavaa.ganbold@example.mn",
-          hobbies: ["бөх", "загасчлал"],
-          username: "dashdavaa.ganbold44",
-          scores: [77, 83, 85],
-          school: "5-р сургууль",
-        },
-        {
-          firstName: "Цэцэг",
-          lastName: "Баатар",
+          lastName: "Цэцэг",
           age: 17,
-          email: "tsetseg.baatar@example.mn",
-          hobbies: ["дуулалт", "зураг зурах"],
-          username: "tsetseg.baatar17",
-          scores: [90, 88, 91],
-          school: "5-р сургууль",
+          score: 89,
+          email: "munkhtsetseg17@mail.mn",
+          hobbies: ["ууланд алхах", "зураг зурах"],
+          username: "munkhts",
+          highSchool: "",
+          lastLoginAt: 1689379200000,
         },
         {
-          firstName: "Баярмаа",
-          lastName: "Жаргалсайхан",
-          age: 31,
-          email: "bayarmaa.jargalsaikhan@example.mn",
-          hobbies: ["фотографи", "унших"],
-          username: "bayarmaa.jargalsaikhan31",
-          scores: [85, 88, 82],
-          school: "",
+          firstName: "Билэгт",
+          lastName: "Наран",
+          age: 16,
+          score: 78,
+          email: "bilegt.naran@yahoo.com",
+          hobbies: ["код бичих", "бадминтон"],
+          username: "bilegt16",
+          highSchool: "Шинэ Монгол Ахлах Сургууль",
+          lastLoginAt: 1691558400000,
         },
         {
-          firstName: "Гантулга",
-          lastName: "Лхагвасүрэн",
-          age: 36,
-          email: "gantulga.lkhagvasuren@example.mn",
-          hobbies: ["дугуй унах", "шатрын тоглоом"],
-          username: "gantulga.lkhagvasuren36",
-          scores: [89, 84, 90],
-          school: "",
+          firstName: "Эрдэнэ",
+          lastName: "Золбоо",
+          age: 18,
+          score: 94,
+          email: "erdene.zolboo@gmail.com",
+          hobbies: ["усанд сэлэх", "робот техник"],
+          username: "zolboo18",
+          highSchool: "Улаанбаатарын Олон Улсын Сургууль",
+          lastLoginAt: 1689926400000,
         },
         {
-          firstName: "Энхжаргал",
-          lastName: "Батжаргал",
-          age: 20,
-          email: "enkhjargal.batjargal@example.mn",
-          hobbies: ["сагсан бөмбөг", "гажсан"],
-          username: "enkhjargal.batjargal20",
-          scores: [91, 87, 88],
-          school: "",
+          firstName: "Хулан",
+          lastName: "Гантулга",
+          age: 17,
+          score: 87,
+          email: "khulan.g17@gmail.com",
+          hobbies: ["бүжиглэх", "шатар"],
+          username: "khulantulga",
+          highSchool: "84-р Дунд Сургууль",
+          lastLoginAt: 1692192000000,
         },
         {
-          firstName: "Эрхэм",
-          lastName: "Цэнд",
-          age: 40,
-          email: "erkhem.tsend@example.mn",
-          hobbies: ["загасчлал", "нум сум"],
-          username: "erkhem.tsend40",
-          scores: [78, 82, 85],
-          school: "",
+          firstName: "Цэнгэл",
+          lastName: "Баярсайхан",
+          age: 16,
+          score: 80,
+          email: "tsengel.bs16@gmail.com",
+          hobbies: ["программ бичих", "дугуй унах"],
+          username: "tsengelbs",
+          highSchool: "Чингэлтэй Дүүргийн Ахлах Сургууль",
+          lastLoginAt: 1688899200000,
+        },
+        {
+          firstName: "Од",
+          lastName: "Энхболд",
+          age: 17,
+          score: 90,
+          email: "od.enkhbold@gmail.com",
+          hobbies: ["математик", "кино үзэх"],
+          username: "odbold17",
+          highSchool: "Улаанбаатар Комплекс Сургууль",
+          lastLoginAt: 1692806400000,
+        },
+        {
+          firstName: "Саранзаяа",
+          lastName: "Цолмон",
+          age: 18,
+          score: 93,
+          email: "saranzaya.t@gmail.com",
+          hobbies: ["дуулж хөгжимдөх", "бичих"],
+          username: "saran_ts18",
+          highSchool: "",
+          lastLoginAt: 1691232000000,
+        },
+        {
+          firstName: "Энхээ",
+          lastName: "Дорж",
+          age: 16,
+          score: 75,
+          email: "enkhee.dorj@gmail.com",
+          hobbies: ["зураг зурах", "аялах"],
+          username: "enkheedorj16",
+          highSchool: "52-р Сургууль",
+          lastLoginAt: 1689216000000,
+        },
+        {
+          firstName: "Тунгалаг",
+          lastName: "Энхжаргал",
+          age: 17,
+          score: 83,
+          email: "tungalag.enkh@gmail.com",
+          hobbies: ["гар бөмбөг", "түүх сонирхох"],
+          username: "tunga_enk",
+          highSchool: "Нарлаг Ахлах Сургууль",
+          lastLoginAt: 1691961600000,
+        },
+        {
+          firstName: "Баяр",
+          lastName: "Амар",
+          age: 18,
+          score: 88,
+          email: "bayar.amar@gmail.com",
+          hobbies: ["теннис", "ном унших"],
+          username: "bayaramar18",
+          highSchool: "Энх Тайван Ахлах Сургууль",
+          lastLoginAt: 1690310400000,
+        },
+        {
+          firstName: "Дэлгэр",
+          lastName: "Болд",
+          age: 16,
+          score: 79,
+          email: "delger.bold@mail.mn",
+          hobbies: ["каратэ", "хөгжим сонсох"],
+          username: "delgerbold",
+          highSchool: "1-р Ахлах Сургууль",
+          lastLoginAt: 1689504000000,
+        },
+        {
+          firstName: "Зулаа",
+          lastName: "Оюун",
+          age: 17,
+          score: 91,
+          email: "zulaa.oyun@gmail.com",
+          hobbies: ["зураг авах", "код бичих"],
+          username: "zuloyun17",
+          highSchool: "Монгол Модерн Сургууль",
+          lastLoginAt: 1692672000000,
+        },
+        {
+          firstName: "Нарантуяа",
+          lastName: "Алтан",
+          age: 18,
+          score: 96,
+          email: "narantuya.altan@gmail.com",
+          hobbies: ["биологи", "мэтгэлцээн"],
+          username: "nara.altan",
+          highSchool: "Улаанбаатар Элит Сургууль",
+          lastLoginAt: 1690099200000,
         },
       ];
 
-      document.getElementById("ners").innerHTML = output;
+      function renderNers(students) {
+        const output = students
+          .map((student, index) => generateTableROw(index, student))
+          .join("");
 
-      function generateTableROw(ner) {
+        document.getElementById("students").innerHTML = output;
+      }
+
+      function generateTableROw(students) {
         const result = `
                             <tr>
-                    <td>${ner.firstName.toUpperCase()}</td>
-                    <td>${ner.lastName}</td>
-                    <td>${ner.age}</td>
-                    <td>${ner.email}</td>
-                    <td>${ner.hobbies.join("  ,  ")}</td>
-                    <td>${ner.scores}</td>
+                    <td>${student.firstName.toUpperCase()}</td>
+                    <td>${student.lastName}</td>
+                    <td>${student.age}</td>
+                    <td>${student.email}</td>
+                    <td>${student.hobbies.join("  ,  ")}</td>
+                    <td>${student.score}</td>
                     <td>${
-                      ner.school
-                        ? ner.school
+                      student.highSchool
+                        ? student.highSchool
                         : '<span style="opacity:30%">not available</span>'
                     }</td>
+                    <td>${student.lastLoginAt}</td>
                 </tr`;
         return result;
       }
       function All() {
         let output = "";
-        for (let i = 0; i < ners.length; i++) {
-          if (ners[i].age > 1) {
-            output += generateTableROw(ners[i]);
+        for (let i = 0; i < students.length; i++) {
+          if (students[i].age > 1) {
+            output += generateTableROw(students[i]);
           }
         }
-        document.getElementById("ners").innerHTML = output;
+        document.getElementById("students").innerHTML = output;
       }
 
       function Adults() {
         let output = "";
-        for (let i = 0; i < ners.length; i++) {
-          if (ners[i].age >= 21) {
-            output += generateTableROw(ners[i]);
+        for (let i = 0; i < students.length; i++) {
+          if (students[i].age >= 21) {
+            output += generateTableROw(students[i]);
           }
         }
-        document.getElementById("ners").innerHTML = output;
+        document.getElementById("students").innerHTML = output;
       }
       function minors() {
         let output = "";
-        for (let i = 0; i < ners.length; i++) {
-          if (ners[i].age <= 21) {
-            output += generateTableROw(ners[i]);
+        for (let i = 0; i < students.length; i++) {
+          if (students[i].age <= 21) {
+            output += generateTableROw(students[i]);
           }
         }
-        document.getElementById("ners").innerHTML = output;
+        document.getElementById("students").innerHTML = output;
       }
       function score() {
         let output = "";
         const avg =
-          (ners[i].scores[0] + ners[i].scores[1] + ners[i].scores.length - 1) /
+          (students[i].scores[0] +
+            students[i].scores[1] +
+            students[i].scores.length -
+            1) /
           3;
-        for (let i = 0; i < ners.length; i++) {
+        for (let i = 0; i < students.length; i++) {
           output === avg.math.trunc();
         }
-        document.getElementById("ners").innerHTML = output;
+        document.getElementById("students").innerHTML = output;
       }
       function search() {
         const query = prompt("Search query");
         let output = "";
-        for (let i = 0; i < ners.length; i++) {
-          const lowername = ners[i].firstName.toLowerCase();
+        for (let i = 0; i < students.length; i++) {
+          const lowername = students[i].firstName.toLowerCase();
           const lowerQuery = query.toLowerCase();
-          const lowerEmail = ners[i].email.toLowerCase();
+          const lowerEmail = students[i].email.toLowerCase();
           if (lowername.includes(lowerQuery) || lowerEmail.includes(lowerQuery))
-            output += generateTableROw(ners[i]);
+            output += generateTableROw(students[i]);
         }
-        document.getElementById("ners").innerHTML = output;
+        document.getElementById("students").innerHTML = output;
       }
 
-      const sortAge = ners.sort((a, b) => a.age - b.age);
+      let isSortingAgeAsc = true;
+      const sortAge = () => {
+        const sortedNers = students.sort((a, b) => {
+          if (isSortingAgeAs) {
+            return a.age - b.age;
+          } else {
+            return b.age - a.age;
+          }
+        });
+        isSortingAgeAsc = !isSortingAgeAsc;
+        const output = sortedNers
+          .map((student, index) => generateTableROw(index, student))
+          .join("");
+
+        document.getElementById("students").innerHTML = output;
+      };
+      function date() {
+        forEach((student) => {
+          student.lastLoginAtISO = new Date(student.lastLoginAt).toISOString();
+        });
+
+        console.log(students[0].lastLoginAtISO);
+      }
     </script>
   </body>
 </html>
