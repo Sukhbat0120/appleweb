@@ -257,14 +257,6 @@
         },
       ];
 
-      function renderNers(students) {
-        const output = students
-          .map((student, index) => generateTableROw(index, student))
-          .join("");
-
-        document.getElementById("students").innerHTML = output;
-      }
-
       function generateTableROw(students) {
         const result = `
                             <tr>
@@ -340,7 +332,7 @@
       let isSortingAgeAsc = true;
       const sortAge = () => {
         const sortedNers = students.sort((a, b) => {
-          if (isSortingAgeAs) {
+          if (sortAge) {
             return a.age - b.age;
           } else {
             return b.age - a.age;
