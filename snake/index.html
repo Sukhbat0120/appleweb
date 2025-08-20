@@ -17,18 +17,17 @@
       width: 400px;
       position: relative;
     }
-
-    .snakeHead {
-      width: 20px;
-      height: 20px;
-      background-color: black;
+    .snake-tail {
       position: absolute;
-      top: 40px;
-      left: 80px;
+      background-color: bisque;
+      border-radius: 5px;
     }
   </style>
   <body>
-    <div class="board"><div id="snakehead" class="snakeHead"></div></div>
+    <div class="board" id="board">
+      <div id="tails" class="snake-tail"></div>
+    </div>
+
     <div>
       <button onclick="changeDirection(`up`)" class="button is-normal">
         Up
@@ -45,41 +44,65 @@
     </div>
 
     <script>
-      let headX = 80;
-      let headY = 40;
+      const unit = 40;
+      const board = { height: 20, width: 30 };
+      let head = { x: 4, y: 5 };
+
+      const tails = [
+        { x: 2, y: 5 },
+        { x: 3, y: 5 },
+        { x: 4, y: 5 },
+      ];
       let direction = "right";
+
+      function init() {
+        const boardWidth = board.width * unit;
+        document.getElementById("board").style.width = `${boardWidth}px`;
+
+        const boardHeight = board.height * unit;
+        document.getElementById("board").style.height = `${boardHeight}px`;
+      }
+
+      init();
 
       function changeDirection(newdirection) {
         direction = newdirection;
       }
 
       function goRight() {
-        headX = headX + 20;
-        if (headX === 400) {
-          headX = 0;
+        head.x = head.x + 1;
+        if (head.x === board.width) {
+          head.x = 0;
         }
       }
       function goLeft() {
-        headX = headX - 20;
-        if (headX === 0) {
-          headX = 380;
+        head.x = head.x - 1;
+        if (head.x < 0) {
+          head.x === board.width - 1;
         }
       }
       function goUp() {
-        headY = headY - 20;
-        if (headY === 0) {
-          headY = 180;
+        head.y = head.y - 1;
+        if (head.y < 0) {
+          head.y = board.height - 1;
         }
       }
       function goDown() {
-        headY = headY + 20;
-        if (headY === 200) {
-          headY = 0;
+        head.y = head.y + 1;
+        if (head.y === board.height) {
+          head.y = 0;
         }
       }
       function render() {
-        document.getElementById("snakehead").style.left = `${headX}px`;
-        document.getElementById("snakehead").style.top = `${headY}px`;
+        const tailsHtml = tails
+          .map(
+            (tail) =>
+              `<div style="width:${unit}px; height:${unit}px; left:${
+                tail.x * unit
+              }px; top ${tail.y * unit}px"class="snake-tail"></div>`
+          )
+          .join("");
+        document.getElementById("tails").innerHTML = tailsHtml;
       }
       setInterval(() => {
         if (direction === "right") {
@@ -91,6 +114,10 @@
         } else if (direction === "down") {
           goDown();
         }
+
+        tails.push({ x: head.x, y: head.y });
+        tails.shift();
+
         render();
       }, 500);
 
