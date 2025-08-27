@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>theme</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script>
+      const primaryColor = "rgb(68, 135, 153)";
+    </script>
+    <style>
+      :root {
+        --primary-color: rgb(68, 135, 153);
+        --background: white;
+        --text-color: black;
+      }
+      .dark {
+        --background: black;
+        --text-color: white;
+      }
+      .halloween {
+        --primary-color: rgb(153, 13, 9);
+        --background: rgb(109, 30, 30);
+        --text-color: rgb(26, 7, 7);
+      }
+      html,
+      body {
+        background-color: var(--background);
+        color: var(--text-color);
+      }
+      .category {
+        background-color: var(--primary-color);
+        padding: 5px;
+      }
+      a {
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="changeTheme('dark')">dark</button>
+      <button onclick="changeTheme('')">light</button>
+      <button onclick="changeTheme('halloween')">halloween</button>
+    </div>
+    <div class="category">Taylor</div>
+
+    <p>
+      Дуучин <a href="https://gogo.mn/r/687q48">Тэйлор Свифт</a>, Америкийн хөл
+      бөмбөгийн үндэсний лигийн тоглогч Трэвис Келси нар сүй тавьснаа зарлалаа.
+      Хосууд зургаа цахим сүлжээнд “Англи хэлний багш болон Биеийн тамирын багш
+      нь гэрлэнэ” гэсэн тайлбартайгаар нийтэлсэн байна. Тэйлор Свифт болон
+      Трэвис Келси нар 2023 оны арванхоёрдугаар үерхлээ олон нийтэд ил болгосон.
+      Дуучин бүсгүй энэ талаар “Бидэнд олон нийтэд зарлахаасаа өмнө хамт байх
+      зөндөө цаг байсанд маш их баярладаг. Энэ үеэр бие биеэ илүү таньж мэдсэн”
+      хэмээн нэгэн ярилцлагадаа дурдаж байв.
+    </p>
+
+    <script>
+      function changeTheme(theme) {
+        document.documentElement.className = theme;
+      }
+    </script>
+  </body>
+</html>
