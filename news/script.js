@@ -62,32 +62,49 @@ const politicsBtn = document.getElementById("politics-btn");
 politicsBtn.addEventListener("click", () => {
   const politicPosts = data.filter((post) => post.genre == "politics");
   document.getElementById("app").innerHTML = "";
-  renderPost(politicPosts);
+  generateHtmlElement(politicPosts);
 });
 
 const sportsBtn = document.getElementById("sports-btn");
 sportsBtn.addEventListener("click", () => {
   const sportsPost = data.filter((post) => post.genre == "sports");
   document.getElementById("app").innerHTML = "";
-  renderPost(sportsPost);
+  generateHtmlElement(sportsPost);
 });
+function generateHtmlElement(element, attributes, value) {
+  const el = document.createElement(element);
+  for (const attr of attributes) {
+    el.setAttribute(attr.attribute, attr.value);
+  }
+  el.innerText = value;
+  return el;
+}
+const postsDiv = generateHtmlElement("div", [
+  { attribute: "class" },
+  { value: "cards" },
+]);
 
-function renderPost(postObjects) {
-  const postsDiv = document.createElement("div");
-  postsDiv.setAttribute("class", "cards");
-
-  for (const postObject of postObjects) {
-    const postDiv = document.createElement("div");
-    postDiv.setAttribute("class", "card");
-    const postImg = document.createElement("img");
-    postImg.setAttribute("src", postObject.imgUrl);
-    postImg.setAttribute("class", "postImg");
-    const postDetail = document.createElement("div");
-    const h2Title = document.createElement("h2");
-    h2Title.setAttribute("class", "title");
+for (const postObject of data) {
+  const postDiv = generateHtmlElement("div", [
+    { attribute: "class" },
+    { value: "card" },
+  ]);
+  {
+    const postImg = generateHtmlElement(
+      "img",
+      [{ attribute: "class" }, { value: "postImg" }],
+      [{ attribute: "src" }, { value: " imgUrl" }]
+    );
+    const postDetail = generateHtmlElement("div");
+    const h2Title = generateHtmlElement("h2", [
+      { attribute: "class" },
+      { value: "title" },
+    ]);
     h2Title.innerText = postObject.title;
-    const pDesk = document.createElement("p");
-    pDesk.setAttribute("class", "text");
+    const pDesk = generateHtmlElement("p", [
+      { attribute: "class" },
+      { value: "text" },
+    ]);
     pDesk.innerText = postObject.text;
     postDetail.appendChild(h2Title);
     postDetail.appendChild(pDesk);
@@ -97,5 +114,3 @@ function renderPost(postObjects) {
   }
   document.getElementById("app").appendChild(postsDiv);
 }
-
-renderPost();
