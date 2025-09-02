@@ -1,6 +1,6 @@
 export function Card() {
   return (
-    <div className="flex">
+    <div className="flex overflow-scroll">
       <div className="bg-[url(https://upload.wikimedia.org/wikipedia/commons/e/e4/Latte_and_dark_coffee.jpg)] w-[600px] h-[350px] bg-contain relative rounded-[6px]">
         <div>
           <p className="absolute bottom-0.5 right-1 bg-gray-500 ">10:36</p>
@@ -8,8 +8,9 @@ export function Card() {
       </div>
       <div className="p-10 gap-2">
         <h2 className="text-2xl font-semibold">Cappuccino routine</h2>
-        <p>10M views </p>
-        <span>
+        <div className="flex">
+          <p>10M views </p>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -20,10 +21,10 @@ export function Card() {
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
           </svg>
-        </span>
-        <span>
+
           <p>5 years ago</p>
-        </span>
+        </div>
+
         <div className="flex gap-1">
           <a className="font-bold hover:text-gray-400 ">Coffee Shop Vibes</a>
           <svg
