@@ -1,9 +1,9 @@
 export function Card() {
   return (
-    <div className="flex overflow-scroll">
-      <div className="bg-[url(https://upload.wikimedia.org/wikipedia/commons/e/e4/Latte_and_dark_coffee.jpg)] w-[600px] h-[350px] bg-contain relative rounded-[6px]">
+    <div className="flex">
+      <div className="bg-[url(https://upload.wikimedia.org/wikipedia/commons/e/e4/Latte_and_dark_coffee.jpg)] w-[600px] h-[350px] bg-contain relative rounded-[6px] bg-no-repeat">
         <div>
-          <p className="absolute bottom-0.5 right-1 bg-gray-500 ">10:36</p>
+          <p className="absolute bottom-0.5 right-10  bg-gray-500 ">10:36</p>
         </div>
       </div>
       <div className="p-10 gap-2">

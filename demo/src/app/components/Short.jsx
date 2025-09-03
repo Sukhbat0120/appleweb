@@ -1,7 +1,10 @@
-export function Short() {
+export function Short(props) {
+  console.log(props.background);
   return (
     <div className=" bg-linear-500  p-2 w-min">
-      <div className="bg-[url(https://hips.hearstapps.com/hmg-prod/images/81st-golden-globe-awards-taylor-swift-on-the-red-carpet-of-news-photo-1719260997.jpg?crop=0.384xw:0.488xh;0.546xw,0.0864xh&resize=640:*)] bg-contain size-80 rounded-sm  "></div>
+      <div className=" w-[250px] min-h-[400px ] rounded-sm  ">
+        <img src={props.img} alt="" className="min-h-[340px]" />
+      </div>
       <div className="size 80 flex   text-2xl ">
         <p>Taylor Swift Top Hits 2025 - music</p>
         <svg
