@@ -58,59 +58,68 @@ const data = [
     genre: "politics",
   },
 ];
-const politicsBtn = document.getElementById("politics-btn");
-politicsBtn.addEventListener("click", () => {
-  const politicPosts = data.filter((post) => post.genre == "politics");
-  document.getElementById("app").innerHTML = "";
-  generateHtmlElement(politicPosts);
-});
 
-const sportsBtn = document.getElementById("sports-btn");
-sportsBtn.addEventListener("click", () => {
-  const sportsPost = data.filter((post) => post.genre == "sports");
-  document.getElementById("app").innerHTML = "";
-  generateHtmlElement(sportsPost);
-});
-function generateHtmlElement(element, attributes, value) {
+function generateHtmlElement(element, attributes = [], value = "") {
   const el = document.createElement(element);
   for (const attr of attributes) {
     el.setAttribute(attr.attribute, attr.value);
   }
-  el.innerText = value;
+  if (element === "img") {
+    const srcAttr = attributes.find((a) => a.attribute === "src");
+    if (srcAttr) el.src = srcAttr.value;
+  } else {
+    el.innerText = value;
+  }
   return el;
 }
-const postsDiv = generateHtmlElement("div", [
-  { attribute: "class" },
-  { value: "cards" },
-]);
 
-for (const postObject of data) {
-  const postDiv = generateHtmlElement("div", [
-    { attribute: "class" },
-    { value: "card" },
+function renderPosts(posts) {
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  const postsDiv = generateHtmlElement("div", [
+    { attribute: "class", value: "cards" },
   ]);
-  {
-    const postImg = generateHtmlElement(
-      "img",
-      [{ attribute: "class" }, { value: "postImg" }],
-      [{ attribute: "src" }, { value: " imgUrl" }]
-    );
-    const postDetail = generateHtmlElement("div");
-    const h2Title = generateHtmlElement("h2", [
-      { attribute: "class" },
-      { value: "title" },
+
+  for (const post of posts) {
+    const postDiv = generateHtmlElement("div", [
+      { attribute: "class", value: "card" },
     ]);
-    h2Title.innerText = postObject.title;
-    const pDesk = generateHtmlElement("p", [
-      { attribute: "class" },
-      { value: "text" },
-    ]);
-    pDesk.innerText = postObject.text;
+
+    const postImg = document.createElement("img");
+    postImg.className = "postImg";
+    postImg.src = post.imgUrl;
+
+    const postDetail = document.createElement("div");
+
+    const h2Title = document.createElement("h2");
+    h2Title.className = "title";
+    h2Title.innerText = post.title;
+
+    const pDesk = document.createElement("p");
+    pDesk.className = "text";
+    pDesk.innerText = post.text;
+
     postDetail.appendChild(h2Title);
     postDetail.appendChild(pDesk);
+
     postDiv.appendChild(postImg);
     postDiv.appendChild(postDetail);
+
     postsDiv.appendChild(postDiv);
   }
-  document.getElementById("app").appendChild(postsDiv);
+
+  app.appendChild(postsDiv);
 }
+
+document.getElementById("politics-btn").addEventListener("click", () => {
+  const politicPosts = data.filter((post) => post.genre === "politics");
+  renderPosts(politicPosts);
+});
+
+document.getElementById("sports-btn").addEventListener("click", () => {
+  const sportsPosts = data.filter((post) => post.genre === "sports");
+  renderPosts(sportsPosts);
+});
+
+renderPosts(data);
