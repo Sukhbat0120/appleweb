@@ -14,6 +14,16 @@ export default function Home() {
           changeColor
         </button>
       </a>
+       <a href="/changeColor">
+        <button className="px-4 py-2 rounded-md text-light-600 font-bold bg-gray-400 ml-2">
+          changeColor
+        </button>
+      </a>
+       <a href="/changeColor">
+        <button className="px-4 py-2 rounded-md text-light-600 font-bold bg-gray-400 ml-2">
+          changeColor
+        </button>
+      </a>
     </>
   );
 }
