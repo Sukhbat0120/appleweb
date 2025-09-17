@@ -4,6 +4,7 @@ import { Input } from "./Input";
 import { AddButton } from "./AddButton";
 import { Task } from "./Task";
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 export function FirstPage() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -14,9 +15,12 @@ export function FirstPage() {
   };
 
   const handleOnClick = () => {
-    setTodos([...todos, inputValue]);
+    setTodos([...todos, { nametxt: inputValue, id: uuidv4() }]);
     setInputValue("");
     console.log(todos);
+  };
+  const handleOnDelete = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
@@ -31,9 +35,20 @@ export function FirstPage() {
         <div className="flex justify-center">
           <Button />
         </div>
-        {todos.map((el, index, children) => {
-          return <Task key={index} todo={el}></Task>;
+        {todos.map((el) => {
+          return (
+            <Task
+              key={el.id}
+              todo={el}
+              handleOnDelete={() => {
+                handleOnDelete(el.id);
+              }}
+            ></Task>
+          );
         })}
+        <div>
+          <p className="text-sm text-[#6B7280] mt-1">0 tasks completed</p>
+        </div>
 
         <div className="text-center text-[14px] text-[#6B7280] mt-3"></div>
         <div className="flex justify-center gap-0.5 p-6">
