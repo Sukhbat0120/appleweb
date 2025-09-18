@@ -1,15 +1,22 @@
-export const Button = () => {
+export const Button = ({
+  handleAcive,
+  handleComplete,
+  children,
+  btnColor,
+  handleOnClick,
+}) => {
+  const color = {
+    blue: "bg-[#3C82F6] hover:opacity-80 font-semibold  ",
+    white: "bg-gray-200",
+  };
   return (
     <>
       <div>
-        <button className="bg-[#F3F4F6] hover:opacity-50 w-[38px] h-[32px]  text-[14px]  p-[8px 16px] rounded-[6px]">
-          All
-        </button>
-        <button className="bg-[#F3F4F6] hover:opacity-50  w-[60px] h-[32px] p-[8px 16px] ml-3 mt-2 rounded-[6px]">
-          Active
-        </button>
-        <button className="bg-[#F3F4F6] hover:opacity-50  w-[87px] h-[32px] p-[8px 16px] ml-3 mt-2 rounded-[6px]">
-          Completed
+        <button
+          className={`text-black hover:opacity-50 w-fit   p-2 rounded-[6px] ${color[btnColor]}`}
+          onClick={handleOnClick}
+        >
+          {children}
         </button>
       </div>
     </>
