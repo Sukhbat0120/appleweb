@@ -80,8 +80,8 @@ export default function Home() {
           <Button
             handleAcive={handleActive}
             handleComplete={handleComplete}
-            btnColor="white"
             handleOnClick={() => setFiltering("All")}
+            btnColor="white"
           >
             All
           </Button>
@@ -89,6 +89,7 @@ export default function Home() {
             handleAcive={handleActive}
             handleComplete={handleComplete}
             handleOnClick={() => setFiltering("Active")}
+            btnColor="white"
           >
             Active
           </Button>
@@ -96,6 +97,7 @@ export default function Home() {
             handleAcive={handleActive}
             handleComplete={handleComplete}
             handleOnClick={() => setFiltering("Completed")}
+            btnColor="white"
           >
             Complete
           </Button>

@@ -6,14 +6,15 @@ export const Button = ({
   handleOnClick,
 }) => {
   const color = {
-    blue: "bg-[#3C82F6] hover:opacity-80 font-semibold  ",
-    white: "bg-gray-200",
+    blue: "bg-[#3C82F6] font-semibold hover:opacity-70 ",
+    white: " hover:bg-sky-400",
+    changed: "bg-sky-400 ",
   };
   return (
     <>
       <div>
         <button
-          className={`text-black hover:opacity-50 w-fit   p-2 rounded-[6px] ${color[btnColor]}`}
+          className={`text-black w-fit p-2 rounded-[6px] ${color[btnColor]}`}
           onClick={handleOnClick}
         >
           {children}
